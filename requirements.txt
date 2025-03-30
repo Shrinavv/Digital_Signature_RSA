@@ -3,7 +3,7 @@ aiohttp==3.11.12
 aiosignal==1.3.2
 annotated-types==0.7.0
 anyio==4.8.0
-appopener==1.7
+appopener; platform_system == "Windows"; platform_system == "Windows"
 async-timeout==4.0.3
 attrs==25.1.0
 blinker==1.9.0
