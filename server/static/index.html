@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Send Signed Message</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f4f4f9;
+        }
+        h2 {
+            color: #333;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin-top: 20px;
+        }
+        input[type="text"], input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #28a745;
+            color: white;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <h2>Send Signed Message</h2>
+    <!-- ✅ Corrected: Send message to the Flask backend using HTTPS -->
+    <form id="messageForm" action="https://127.0.0.1:5000/api/receive" method="post">
+        <label for="signed_message">Enter Signed Message:</label>
+        <input type="text" id="signed_message" name="signed_message" required>
+        <input type="submit" value="Send Message">
+    </form>
+
+    <h2>Download Checked Message</h2>
+    <!-- ✅ Corrected: Download message using the correct API -->
+    <form action="https://127.0.0.1:5000/api/download" method="get">
+        <input type="submit" value="Download Message">
+    </form>
+</body>
+</html>
